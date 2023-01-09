@@ -1,0 +1,40 @@
+com/android/tv/classics/models/TvMediaMetadataDAO_Impl.java
+ com.android.tv.classics.models.TvMediaMetadataDAO_Impl
+ com.android.tv.classics.models.TvMediaMetadataDAO_Impl$1
+ com.android.tv.classics.models.TvMediaMetadataDAO_Impl$2
+ com.android.tv.classics.models.TvMediaMetadataDAO_Impl$3
+ com.android.tv.classics.models.TvMediaMetadataDAO_Impl$4
+com/android/tv/classics/NavGraphDirections.java
+ com.android.tv.classics.NavGraphDirections
+ com.android.tv.classics.NavGraphDirections$1
+ com.android.tv.classics.NavGraphDirections$ActionToMediaBrowser
+ com.android.tv.classics.NavGraphDirections$ActionToNowPlaying
+com/android/tv/classics/BuildConfig.java
+ com.android.tv.classics.BuildConfig
+com/android/tv/classics/models/TvMediaDatabase_Impl.java
+ com.android.tv.classics.models.TvMediaDatabase_Impl
+ com.android.tv.classics.models.TvMediaDatabase_Impl$1
+com/android/tv/classics/fragments/MediaBrowserFragmentDirections.java
+ com.android.tv.classics.fragments.MediaBrowserFragmentDirections
+com/android/tv/classics/fragments/NowPlayingFragmentArgs.java
+ com.android.tv.classics.fragments.NowPlayingFragmentArgs
+ com.android.tv.classics.fragments.NowPlayingFragmentArgs$1
+ com.android.tv.classics.fragments.NowPlayingFragmentArgs$Builder
+com/android/tv/classics/models/TvMediaBackgroundDAO_Impl.java
+ com.android.tv.classics.models.TvMediaBackgroundDAO_Impl
+ com.android.tv.classics.models.TvMediaBackgroundDAO_Impl$1
+ com.android.tv.classics.models.TvMediaBackgroundDAO_Impl$2
+ com.android.tv.classics.models.TvMediaBackgroundDAO_Impl$3
+ com.android.tv.classics.models.TvMediaBackgroundDAO_Impl$4
+com/android/tv/classics/fragments/MediaBrowserFragmentArgs.java
+ com.android.tv.classics.fragments.MediaBrowserFragmentArgs
+ com.android.tv.classics.fragments.MediaBrowserFragmentArgs$1
+ com.android.tv.classics.fragments.MediaBrowserFragmentArgs$Builder
+com/android/tv/classics/fragments/NowPlayingFragmentDirections.java
+ com.android.tv.classics.fragments.NowPlayingFragmentDirections
+com/android/tv/classics/models/TvMediaCollectionDAO_Impl.java
+ com.android.tv.classics.models.TvMediaCollectionDAO_Impl
+ com.android.tv.classics.models.TvMediaCollectionDAO_Impl$1
+ com.android.tv.classics.models.TvMediaCollectionDAO_Impl$2
+ com.android.tv.classics.models.TvMediaCollectionDAO_Impl$3
+ com.android.tv.classics.models.TvMediaCollectionDAO_Impl$4

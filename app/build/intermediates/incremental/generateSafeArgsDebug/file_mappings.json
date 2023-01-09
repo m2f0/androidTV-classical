@@ -1,0 +1,1 @@
+[{"navFile":"src\\main\\res\\navigation\\nav_graph.xml","javaFiles":["com.android.tv.classics.NavGraphDirections","com.android.tv.classics.fragments.MediaBrowserFragmentDirections","com.android.tv.classics.fragments.MediaBrowserFragmentArgs","com.android.tv.classics.fragments.NowPlayingFragmentDirections","com.android.tv.classics.fragments.NowPlayingFragmentArgs"]}]

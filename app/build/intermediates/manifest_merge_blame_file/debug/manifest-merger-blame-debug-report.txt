@@ -1,0 +1,421 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3  ~ Copyright 2019 Google LLC
+4  ~
+5  ~ Licensed under the Apache License, Version 2.0 (the "License");
+6  ~ you may not use this file except in compliance with the License.
+7  ~ You may obtain a copy of the License at
+8  ~
+9  ~     http://www.apache.org/licenses/LICENSE-2.0
+10  ~
+11  ~ Unless required by applicable law or agreed to in writing, software
+12  ~ distributed under the License is distributed on an "AS IS" BASIS,
+13  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14  ~ See the License for the specific language governing permissions and
+15  ~ limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.android.tv.classics"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="21"
+23-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="29" />
+24-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml
+25
+26    <!-- Custom permissions for our content provider -->
+27    <permission
+28        android:name="com.android.tv.classics.MEDIA"
+28-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:22:17-54
+29        android:protectionLevel="signature" />
+29-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:22:55-90
+30
+31    <!-- Declare permissions used by our app -->
+32    <uses-permission android:name="com.android.tv.classics.MEDIA" />
+32-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:25:22-59
+33    <uses-permission android:name="android.permission.INTERNET" />
+33-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:26:5-67
+33-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:26:22-64
+34
+35    <!-- Declare non-touchscreen capabilities -->
+36    <uses-feature
+36-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:29:5-31:36
+37        android:name="android.hardware.touchscreen"
+37-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:30:9-52
+38        android:required="false" />
+38-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:31:9-33
+39
+40    <!-- Declare leanback feature requirement -->
+41    <uses-feature
+41-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:34:5-36:35
+42        android:name="android.software.leanback"
+42-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:35:9-49
+43        android:required="true" />
+43-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:36:9-32
+44
+45    <!-- Permissions for home screen launcher integration -->
+46    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+46-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:39:5-90
+46-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:39:22-87
+47    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+47-->[androidx.tvprovider:tvprovider:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\881151eca49e3e9735d37e097d46dd35\tvprovider-1.0.0\AndroidManifest.xml:23:5-89
+47-->[androidx.tvprovider:tvprovider:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\881151eca49e3e9735d37e097d46dd35\tvprovider-1.0.0\AndroidManifest.xml:23:22-86
+48    <uses-permission android:name="android.permission.WAKE_LOCK" />
+48-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:25:5-68
+48-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:25:22-65
+49    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+49-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:26:5-79
+49-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:26:22-76
+50    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+50-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:27:5-81
+50-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:27:22-78
+51    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+51-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:28:5-77
+51-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:28:22-74
+52
+53    <application
+53-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:41:5-135:19
+54        android:allowBackup="true"
+54-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:42:9-35
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.2.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4d059c33cf4a58277d2d537827086017\core-1.2.0\AndroidManifest.xml:24:18-86
+56        android:debuggable="true"
+57        android:fullBackupContent="true"
+57-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:48:9-41
+58        android:icon="@mipmap/ic_launcher"
+58-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:43:9-43
+59        android:label="@string/app_name"
+59-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:44:9-41
+60        android:roundIcon="@mipmap/ic_launcher_round"
+60-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:45:9-54
+61        android:supportsRtl="true"
+61-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:46:9-35
+62        android:theme="@style/AppTheme" >
+62-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:47:9-40
+63        <activity
+63-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:50:9-100:20
+64            android:name="com.android.tv.classics.MainActivity"
+64-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:52:13-64
+65            android:banner="@mipmap/ic_app_banner"
+65-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:55:13-51
+66            android:exported="true"
+66-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:51:13-36
+67            android:icon="@mipmap/ic_launcher"
+67-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:53:13-47
+68            android:label="@string/app_name"
+68-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:56:13-45
+69            android:logo="@mipmap/ic_app_banner"
+69-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:54:13-49
+70            android:screenOrientation="landscape" >
+70-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:57:13-50
+71
+72            <!-- Used as the main entry point from the leanback launcher -->
+73            <intent-filter>
+73-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:60:13-63:29
+74                <action android:name="android.intent.action.MAIN" />
+74-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:61:17-69
+74-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:61:25-66
+75
+76                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+76-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:62:17-86
+76-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:62:27-83
+77            </intent-filter>
+78
+79            <!-- Used as an entry point for channels and individual channel programs -->
+80            <intent-filter>
+80-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:66:13-79:29
+81
+82                <!-- Used to launch our content directly from home screen launcher or Assistant -->
+83                <action android:name="android.intent.action.VIEW" />
+83-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:68:17-69
+83-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:68:25-66
+84                <!-- Allows our app to be launched from a URL, not just via explicit intent -->
+85                <category android:name="android.intent.category.BROWSABLE" />
+85-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:70:17-78
+85-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:70:27-75
+86                <!-- Allows our app to receive implicit intents -->
+87                <category android:name="android.intent.category.DEFAULT" />
+87-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:72:17-76
+87-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:72:27-73
+88
+89                <!-- Define the filters for the URI being sent -->
+90                <data android:host="@string/host_name" />
+90-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:75:17-58
+90-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:75:23-55
+91                <data android:scheme="http" />
+91-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:75:17-58
+91-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:76:23-44
+92                <data android:scheme="https" />
+92-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:75:17-58
+92-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:76:23-44
+93                <data android:pathPattern=".*" />
+93-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:75:17-58
+93-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:78:23-47
+94            </intent-filter>
+95
+96            <!-- Used as an entry point from global search and Google Assistant -->
+97            <intent-filter>
+97-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:82:13-87:29
+98
+99                <!-- Used to launch our content directly from home screen launcher or Assistant -->
+100                <action android:name="android.intent.action.VIEW" />
+100-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:68:17-69
+100-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:68:25-66
+101                <!-- Used to query our content from other applications, such as Google Assistant -->
+102                <action android:name="android.intent.action.SEARCH" />
+102-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:86:17-71
+102-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:86:25-68
+103            </intent-filter>
+104
+105            <!-- Additional settings for searchable content -->
+106            <meta-data
+106-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:90:13-92:54
+107                android:name="android.app.searchable"
+107-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:91:17-54
+108                android:resource="@xml/searchable" />
+108-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:92:17-51
+109
+110            <!-- Deep link testing, used to validate the configuration above -->
+111        </activity>
+112
+113        <!-- Broadcast receiver used to receive communication from the TV Launcher -->
+114        <receiver
+114-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:103:9-121:20
+115            android:name="com.android.tv.classics.receivers.TvLauncherReceiver"
+115-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:104:13-57
+116            android:exported="true" >
+116-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:105:13-36
+117            <intent-filter>
+117-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:106:13-120:29
+118                <category android:name="android.intent.category.DEFAULT" />
+118-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:72:17-76
+118-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:72:27-73
+119                <!-- Our app has been installed and should create its channel in the launcher -->
+120                <action android:name="android.media.tv.action.INITIALIZE_PROGRAMS" />
+120-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:109:17-110:82
+120-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:110:21-79
+121                <!-- User has added a program to the system's watch next channel -->
+122                <action android:name="android.media.tv.action.PREVIEW_PROGRAM_ADDED_TO_WATCH_NEXT" />
+122-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:112:17-113:98
+122-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:113:21-95
+123                <!-- User has removed a program from one of our channels -->
+124                <action android:name="android.media.tv.action.PREVIEW_PROGRAM_BROWSABLE_DISABLED" />
+124-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:115:17-116:97
+124-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:116:21-94
+125                <!-- User has removed a program from the system's watch next channel -->
+126                <action android:name="android.media.tv.action.WATCH_NEXT_PROGRAM_BROWSABLE_DISABLED" />
+126-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:118:17-119:100
+126-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:119:21-97
+127            </intent-filter>
+128        </receiver>
+129
+130        <!-- Content provider used to expose our metadata database to other apps like Assistant -->
+131        <provider
+132            android:name="com.android.tv.classics.providers.TvMediaProvider"
+132-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:126:13-54
+133            android:authorities="@string/authority"
+133-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:128:13-52
+134            android:exported="true"
+134-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:129:13-36
+135            android:permission="com.android.tv.classics.MEDIA" >
+135-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:127:13-56
+136            <path-permission
+136-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:130:13-132:77
+137                android:pathPrefix="/search"
+137-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:131:17-45
+138                android:readPermission="android.permission.GLOBAL_SEARCH" />
+138-->C:\Users\mario\AndroidStudioProjects\tv-samples\ClassicsKotlin\app\src\main\AndroidManifest.xml:132:17-74
+139        </provider>
+140        <provider
+140-->[io.coil-kt:coil:0.7.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\b3cd2d553c481f179229766d1520ca39\jetified-coil-0.7.0\AndroidManifest.xml:10:9-13:40
+141            android:name="coil.util.CoilContentProvider"
+141-->[io.coil-kt:coil:0.7.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\b3cd2d553c481f179229766d1520ca39\jetified-coil-0.7.0\AndroidManifest.xml:11:13-57
+142            android:authorities="com.android.tv.classics.coil"
+142-->[io.coil-kt:coil:0.7.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\b3cd2d553c481f179229766d1520ca39\jetified-coil-0.7.0\AndroidManifest.xml:12:13-56
+143            android:exported="false" />
+143-->[io.coil-kt:coil:0.7.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\b3cd2d553c481f179229766d1520ca39\jetified-coil-0.7.0\AndroidManifest.xml:13:13-37
+144        <provider
+144-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:31:9-37:35
+145            android:name="androidx.work.impl.WorkManagerInitializer"
+145-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:32:13-69
+146            android:authorities="com.android.tv.classics.workmanager-init"
+146-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:33:13-68
+147            android:directBootAware="false"
+147-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:34:13-44
+148            android:exported="false"
+148-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:35:13-37
+149            android:multiprocess="true" />
+149-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:36:13-40
+150
+151        <service
+151-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:39:9-44:35
+152            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+152-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:40:13-88
+153            android:directBootAware="false"
+153-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:41:13-44
+154            android:enabled="@bool/enable_system_alarm_service_default"
+154-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:42:13-72
+155            android:exported="false" />
+155-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:43:13-37
+156        <service
+156-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:45:9-51:35
+157            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+157-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:46:13-84
+158            android:directBootAware="false"
+158-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:47:13-44
+159            android:enabled="@bool/enable_system_job_service_default"
+159-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:48:13-70
+160            android:exported="true"
+160-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:49:13-36
+161            android:permission="android.permission.BIND_JOB_SERVICE" />
+161-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:50:13-69
+162        <service
+162-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:52:9-57:35
+163            android:name="androidx.work.impl.foreground.SystemForegroundService"
+163-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:53:13-81
+164            android:directBootAware="false"
+164-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:54:13-44
+165            android:enabled="@bool/enable_system_foreground_service_default"
+165-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:55:13-77
+166            android:exported="false" />
+166-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:56:13-37
+167
+168        <receiver
+168-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:59:9-64:35
+169            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+169-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:60:13-88
+170            android:directBootAware="false"
+170-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:61:13-44
+171            android:enabled="true"
+171-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:62:13-35
+172            android:exported="false" />
+172-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:63:13-37
+173        <receiver
+173-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:65:9-75:20
+174            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+174-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:66:13-106
+175            android:directBootAware="false"
+175-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:67:13-44
+176            android:enabled="false"
+176-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:68:13-36
+177            android:exported="false" >
+177-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:69:13-37
+178            <intent-filter>
+178-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:71:13-74:29
+179                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+179-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:72:17-87
+179-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:72:25-84
+180                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+180-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:73:17-90
+180-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:73:25-87
+181            </intent-filter>
+182        </receiver>
+183        <receiver
+183-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:76:9-86:20
+184            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+184-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:77:13-104
+185            android:directBootAware="false"
+185-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:78:13-44
+186            android:enabled="false"
+186-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:79:13-36
+187            android:exported="false" >
+187-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:80:13-37
+188            <intent-filter>
+188-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:82:13-85:29
+189                <action android:name="android.intent.action.BATTERY_OKAY" />
+189-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:83:17-77
+189-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:83:25-74
+190                <action android:name="android.intent.action.BATTERY_LOW" />
+190-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:84:17-76
+190-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:84:25-73
+191            </intent-filter>
+192        </receiver>
+193        <receiver
+193-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:87:9-97:20
+194            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+194-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:88:13-104
+195            android:directBootAware="false"
+195-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:89:13-44
+196            android:enabled="false"
+196-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:90:13-36
+197            android:exported="false" >
+197-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:91:13-37
+198            <intent-filter>
+198-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:93:13-96:29
+199                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+199-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:94:17-83
+199-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:94:25-80
+200                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+200-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:95:17-82
+200-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:95:25-79
+201            </intent-filter>
+202        </receiver>
+203        <receiver
+203-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:98:9-107:20
+204            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+204-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:99:13-103
+205            android:directBootAware="false"
+205-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:100:13-44
+206            android:enabled="false"
+206-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:101:13-36
+207            android:exported="false" >
+207-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:102:13-37
+208            <intent-filter>
+208-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:104:13-106:29
+209                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+209-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:105:17-79
+209-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:105:25-76
+210            </intent-filter>
+211        </receiver>
+212        <receiver
+212-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:108:9-119:20
+213            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+213-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:109:13-88
+214            android:directBootAware="false"
+214-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:110:13-44
+215            android:enabled="false"
+215-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:111:13-36
+216            android:exported="false" >
+216-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:112:13-37
+217            <intent-filter>
+217-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:114:13-118:29
+218                <action android:name="android.intent.action.BOOT_COMPLETED" />
+218-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:115:17-79
+218-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:115:25-76
+219                <action android:name="android.intent.action.TIME_SET" />
+219-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:116:17-73
+219-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:116:25-70
+220                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+220-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:117:17-81
+220-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:117:25-78
+221            </intent-filter>
+222        </receiver>
+223        <receiver
+223-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:120:9-129:20
+224            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+224-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:121:13-99
+225            android:directBootAware="false"
+225-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:122:13-44
+226            android:enabled="@bool/enable_system_alarm_service_default"
+226-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:123:13-72
+227            android:exported="false" >
+227-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:124:13-37
+228            <intent-filter>
+228-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:126:13-128:29
+229                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+229-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:127:17-98
+229-->[androidx.work:work-runtime:2.3.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\22609d54067975b4f556595350aaa53f\work-runtime-2.3.2\AndroidManifest.xml:127:25-95
+230            </intent-filter>
+231        </receiver>
+232
+233        <service
+233-->[androidx.room:room-runtime:2.2.4] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7a439dd3ee3a9ee4dbdf1511d02bfc14\room-runtime-2.2.4\AndroidManifest.xml:25:9-27:40
+234            android:name="androidx.room.MultiInstanceInvalidationService"
+234-->[androidx.room:room-runtime:2.2.4] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7a439dd3ee3a9ee4dbdf1511d02bfc14\room-runtime-2.2.4\AndroidManifest.xml:26:13-74
+235            android:exported="false" />
+235-->[androidx.room:room-runtime:2.2.4] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7a439dd3ee3a9ee4dbdf1511d02bfc14\room-runtime-2.2.4\AndroidManifest.xml:27:13-37
+236    </application>
+237
+238</manifest>
